@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhfh33atpst40"
+path="res://.godot/imported/Bone rattling.mp3-23a28be11fd076483f4bd5657c973d5e.mp3str"
+
+[deps]
+
+source_file="res://Enemy/Bone rattling.mp3"
+dest_files=["res://.godot/imported/Bone rattling.mp3-23a28be11fd076483f4bd5657c973d5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

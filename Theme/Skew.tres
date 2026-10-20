@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://xnngi07elg5t"]
+
+[ext_resource type="Shader" uid="uid://bc20qk5ild0rv" path="res://Theme/Skew.gdshader" id="1_aj8o0"]
+
+[resource]
+shader = ExtResource("1_aj8o0")
+shader_parameter/depth_distortion = 0.0
+shader_parameter/depth_distortion_y = 0.0
+shader_parameter/pivot_x = 0.50000002375
+shader_parameter/pivot_y = 0.50000002375

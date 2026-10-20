@@ -1,0 +1,490 @@
+[gd_scene format=3 uid="uid://bm7if26fh5qeh"]
+
+[ext_resource type="Script" uid="uid://2a0x71ow3n34" path="res://Flip Phone/screen.gd" id="1_1mp7q"]
+[ext_resource type="Script" uid="uid://dmblrg4ebh2sv" path="res://Flip Phone/flip_phone.gd" id="1_dhkma"]
+[ext_resource type="Script" uid="uid://d1dhcib10hbir" path="res://Flip Phone/keypad_container.gd" id="2_cmpep"]
+[ext_resource type="Material" uid="uid://xnngi07elg5t" path="res://Theme/Skew.tres" id="2_dhkma"]
+[ext_resource type="Script" uid="uid://bx64vj1j3f6ib" path="res://Flip Phone/phone_button.gd" id="4_k21pf"]
+[ext_resource type="Script" uid="uid://2n4voy4it4ka" path="res://Flip Phone/progress_bar.gd" id="17_k21pf"]
+[ext_resource type="AudioStream" uid="uid://cgykow5wyv4lm" path="res://Sounds/0.wav" id="19_kuiac"]
+[ext_resource type="AudioStream" uid="uid://wv00p51lqsy2" path="res://Sounds/1.wav" id="20_eisws"]
+[ext_resource type="AudioStream" uid="uid://c6iollxa1aoq3" path="res://Sounds/2.wav" id="21_hm0ny"]
+[ext_resource type="AudioStream" uid="uid://b126k2gah1p6u" path="res://Sounds/3.wav" id="22_nfiem"]
+[ext_resource type="AudioStream" uid="uid://qryjfuqnmueq" path="res://Sounds/4.wav" id="23_1ys4j"]
+[ext_resource type="AudioStream" uid="uid://bnur8dcwvpb0t" path="res://Sounds/5.wav" id="24_qjpg8"]
+[ext_resource type="AudioStream" uid="uid://c1r2fuuathutj" path="res://Sounds/6.wav" id="25_2ihyn"]
+[ext_resource type="AudioStream" uid="uid://djdqo1pcjw5a3" path="res://Sounds/7.wav" id="26_uj3oj"]
+[ext_resource type="AudioStream" uid="uid://dix7xy6bljyxb" path="res://Sounds/8.wav" id="27_id741"]
+[ext_resource type="AudioStream" uid="uid://c4xmfeubqkrne" path="res://Sounds/9.wav" id="28_k3ng5"]
+[ext_resource type="Script" uid="uid://bh5ltp8h6c42c" path="res://Flip Phone/text_sounds.gd" id="29_eisws"]
+[ext_resource type="Texture2D" uid="uid://bta5urw4fg04v" path="res://Flip Phone/Phone Sprite.png" id="29_hm0ny"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pshwu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d4315"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vedxa"]
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_xr50w"]
+loop = false
+stream_count = 13
+stream_0 = ExtResource("19_kuiac")
+stream_1 = ExtResource("20_eisws")
+stream_2 = ExtResource("21_hm0ny")
+stream_3 = ExtResource("22_nfiem")
+stream_4 = ExtResource("23_1ys4j")
+stream_5 = ExtResource("24_qjpg8")
+stream_6 = ExtResource("25_2ihyn")
+stream_7 = ExtResource("26_uj3oj")
+stream_8 = ExtResource("27_id741")
+stream_9 = ExtResource("28_k3ng5")
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_5nkbs"]
+polyphony = 10
+
+[node name="FlipPhone" type="Control" unique_id=1609767942]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dhkma")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1719386571]
+z_index = -1
+material = ExtResource("2_dhkma")
+layout_mode = 0
+offset_left = -30.0
+offset_top = -32.0
+offset_right = 270.4041
+offset_bottom = 687.0
+pivot_offset = Vector2(143, 317)
+texture = ExtResource("29_hm0ny")
+
+[node name="Screen" type="Control" parent="TextureRect" unique_id=1385103010]
+anchors_preset = 0
+offset_left = 30.0
+offset_top = 32.0
+offset_right = 230.0
+offset_bottom = 344.0
+script = ExtResource("1_1mp7q")
+
+[node name="Text" type="TextEdit" parent="TextureRect/Screen" unique_id=2114999015]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 77.0
+offset_right = 183.0
+offset_bottom = 110.0
+theme_override_colors/caret_color = Color(0.30980393, 0.41960785, 0.003921569, 1)
+theme_override_colors/caret_background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.30980393, 0.41960785, 0.003921569, 1)
+theme_override_colors/font_readonly_color = Color(0.30980393, 0.41960785, 0.003921569, 1)
+theme_override_constants/caret_width = 6
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pshwu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d4315")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_vedxa")
+editable = false
+virtual_keyboard_enabled = false
+caret_blink = true
+caret_draw_when_editable_disabled = true
+caret_multiple = false
+
+[node name="Keypad" type="Control" parent="TextureRect" unique_id=489744088]
+anchors_preset = 0
+offset_left = 32.0
+offset_top = 342.0
+offset_right = 225.0
+offset_bottom = 679.0
+
+[node name="Keypad Container" type="Control" parent="TextureRect/Keypad" unique_id=1392515912]
+z_index = 10
+anchors_preset = 0
+offset_left = 15.999999
+offset_top = 65.0
+offset_right = 294.0
+offset_bottom = 279.9996
+scale = Vector2(0.6850678, 1.0697714)
+script = ExtResource("2_cmpep")
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect/Keypad/Keypad Container" unique_id=196808480]
+layout_mode = 0
+offset_left = 39.412155
+offset_top = -153.30377
+offset_right = 239.39238
+offset_bottom = -126.30377
+show_percentage = false
+script = ExtResource("17_k21pf")
+
+[node name="1" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=1366414030]
+layout_mode = 0
+offset_left = 13.137388
+offset_top = -0.93478394
+offset_right = 91.9617
+offset_bottom = 50.0
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/1" unique_id=1831705284]
+use_parent_material = true
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "1"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/1" unique_id=1742078235]
+use_parent_material = true
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+
+[node name="2" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=1286898337]
+layout_mode = 0
+offset_left = 94.88113
+offset_top = -0.93478394
+offset_right = 182.4637
+offset_bottom = 51.41284
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/2" unique_id=1787814598]
+use_parent_material = true
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "2"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/2" unique_id=1647751166]
+use_parent_material = true
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+text = "ABC"
+
+[node name="3" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=1974939563]
+layout_mode = 0
+offset_left = 183.92342
+offset_top = -0.9347791
+offset_right = 265.66714
+offset_bottom = 50.47806
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/3" unique_id=996299213]
+use_parent_material = true
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "3"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/3" unique_id=1040017252]
+use_parent_material = true
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+text = "DEF"
+
+[node name="4" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=1445141014]
+layout_mode = 0
+offset_left = 11.677675
+offset_top = 52.347656
+offset_right = 93.4214
+offset_bottom = 104.0
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/4" unique_id=1988012100]
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "4"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/4" unique_id=2001980132]
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+text = "GHI"
+
+[node name="5" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=2113316277]
+layout_mode = 0
+offset_left = 93.42142
+offset_top = 51.41284
+offset_right = 183.9234
+offset_bottom = 104.0
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/5" unique_id=1982303030]
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "5"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/5" unique_id=1217318956]
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+text = "JKL"
+
+[node name="6" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=2122871221]
+layout_mode = 0
+offset_left = 183.92342
+offset_top = 51.41287
+offset_right = 265.66714
+offset_bottom = 103.7605
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/6" unique_id=229018917]
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "6"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/6" unique_id=1019705459]
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+text = "MNO"
+
+[node name="7" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=520763954]
+layout_mode = 0
+offset_left = 11.677675
+offset_top = 103.7605
+offset_right = 93.42141
+offset_bottom = 157.04291
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/7" unique_id=785065090]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -24.815065
+offset_top = 2.8043373
+offset_right = 23.18494
+offset_bottom = 18.804337
+grow_horizontal = 2
+text = "7"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/7" unique_id=1475917338]
+layout_mode = 0
+offset_left = 8.758258
+offset_top = 25.239035
+offset_right = 72.758255
+offset_bottom = 41.239037
+text = "PQRS"
+
+[node name="8" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=1859470177]
+layout_mode = 0
+offset_left = 93.42142
+offset_top = 103.76049
+offset_right = 183.9234
+offset_bottom = 157.04291
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/8" unique_id=1798002691]
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "8"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/8" unique_id=2032534194]
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 23.369476
+offset_right = 69.895645
+offset_bottom = 39.369476
+text = "TUV"
+
+[node name="9" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=850930566]
+layout_mode = 0
+offset_left = 183.92342
+offset_top = 103.76049
+offset_right = 265.66714
+offset_bottom = 157.04291
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/9" unique_id=234995419]
+layout_mode = 0
+offset_left = 20.435934
+offset_top = 2.8043365
+offset_right = 68.435936
+offset_bottom = 18.804337
+text = "9"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/9" unique_id=493371062]
+layout_mode = 0
+offset_left = 13.137386
+offset_top = 23.369476
+offset_right = 77.13739
+offset_bottom = 39.369476
+text = "WXYZ"
+
+[node name="*" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=474506767]
+layout_mode = 0
+offset_left = 11.677675
+offset_top = 157.04288
+offset_right = 93.42141
+offset_bottom = 209.3905
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/*" unique_id=421193373]
+layout_mode = 0
+offset_left = 14.5970955
+offset_top = 2.8043365
+offset_right = 62.597095
+offset_bottom = 18.804337
+text = "*"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/*" unique_id=1515812768]
+layout_mode = 0
+offset_left = 14.5970955
+offset_top = 20.56514
+offset_right = 62.597095
+offset_bottom = 36.56514
+text = "NXT"
+
+[node name="0" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=2113403261]
+layout_mode = 0
+offset_left = 93.42142
+offset_top = 157.0429
+offset_right = 183.9234
+offset_bottom = 210.32533
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/0" unique_id=321806005]
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 1.8695574
+offset_right = 69.895645
+offset_bottom = 17.869556
+text = "0"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/0" unique_id=252043159]
+layout_mode = 0
+offset_left = 5.8388386
+offset_top = 22.434698
+offset_right = 85.83884
+offset_bottom = 38.4347
+text = "SPACE"
+
+[node name="#" type="Button" parent="TextureRect/Keypad/Keypad Container" unique_id=1369926882]
+layout_mode = 0
+offset_left = 183.92342
+offset_top = 157.0429
+offset_right = 264.20746
+offset_bottom = 208.45576
+script = ExtResource("4_k21pf")
+
+[node name="Number" type="Label" parent="TextureRect/Keypad/Keypad Container/#" unique_id=1924907816]
+layout_mode = 0
+offset_left = 18.976225
+offset_top = 1.8695574
+offset_right = 66.97623
+offset_bottom = 17.869556
+text = "#"
+horizontal_alignment = 1
+
+[node name="Letters" type="Label" parent="TextureRect/Keypad/Keypad Container/#" unique_id=1461174942]
+layout_mode = 0
+offset_left = 21.895643
+offset_top = 21.499918
+offset_right = 69.895645
+offset_bottom = 37.499916
+text = "<="
+
+[node name="ButtonCycleTimer" type="Timer" parent="TextureRect/Keypad/Keypad Container" unique_id=792110621]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="TextureRect/Keypad/Keypad Container" unique_id=196592887]
+stream = SubResource("AudioStreamPlaylist_xr50w")
+
+[node name="TextSounds" type="AudioStreamPlayer" parent="TextureRect/Keypad/Keypad Container" unique_id=742506975]
+stream = SubResource("AudioStreamPolyphonic_5nkbs")
+max_polyphony = 10
+script = ExtResource("29_eisws")
+sound_effects = Dictionary[String, AudioStream]({
+"#": ExtResource("28_k3ng5"),
+"*": ExtResource("26_uj3oj"),
+"0": ExtResource("19_kuiac"),
+"1": ExtResource("20_eisws"),
+"2": ExtResource("21_hm0ny"),
+"3": ExtResource("22_nfiem"),
+"4": ExtResource("23_1ys4j"),
+"5": ExtResource("24_qjpg8"),
+"6": ExtResource("25_2ihyn"),
+"7": ExtResource("26_uj3oj"),
+"8": ExtResource("27_id741"),
+"9": ExtResource("28_k3ng5")
+})
+
+[connection signal="text_updated" from="TextureRect/Screen" to="." method="_on_screen_text_updated"]
+[connection signal="delete" from="TextureRect/Keypad/Keypad Container" to="TextureRect/Screen" method="_on_keypad_container_delete"]
+[connection signal="submit" from="TextureRect/Keypad/Keypad Container" to="TextureRect/Screen" method="_on_keypad_container_submit"]
+[connection signal="update_screen" from="TextureRect/Keypad/Keypad Container" to="TextureRect/Screen" method="_on_keypad_container_update_screen"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/1" to="TextureRect/Keypad/Keypad Container/1" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/1" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/1" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/2" to="TextureRect/Keypad/Keypad Container/2" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/2" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/2" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/3" to="TextureRect/Keypad/Keypad Container/3" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/3" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/3" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/4" to="TextureRect/Keypad/Keypad Container/4" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/4" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/4" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/5" to="TextureRect/Keypad/Keypad Container/5" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/5" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/5" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/6" to="TextureRect/Keypad/Keypad Container/6" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/6" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/6" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/7" to="TextureRect/Keypad/Keypad Container/7" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/7" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/7" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/8" to="TextureRect/Keypad/Keypad Container/8" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/8" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/8" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/9" to="TextureRect/Keypad/Keypad Container/9" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/9" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/9" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/*" to="TextureRect/Keypad/Keypad Container/*" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/*" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/*" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/0" to="TextureRect/Keypad/Keypad Container/0" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/0" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/0" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="button_down" from="TextureRect/Keypad/Keypad Container/#" to="TextureRect/Keypad/Keypad Container/#" method="_on_button_down"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/#" to="." method="_on__number_pressed"]
+[connection signal="number_pressed" from="TextureRect/Keypad/Keypad Container/#" to="TextureRect/Keypad/Keypad Container" method="_on_number_pressed"]
+[connection signal="timeout" from="TextureRect/Keypad/Keypad Container/ButtonCycleTimer" to="TextureRect/Keypad/Keypad Container" method="_on_button_cycle_timer_timeout"]

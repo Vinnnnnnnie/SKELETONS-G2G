@@ -1,0 +1,43 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://cg7f6lp0rln4s"]
+
+[sub_resource type="Curve" id="Curve_bx3dx"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.3820225), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kbfqn"]
+curve = SubResource("Curve_bx3dx")
+
+[sub_resource type="Curve" id="Curve_rj11h"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.47457626, 0.516854), -0.861798, -0.861798, 0, 0, Vector2(0.96610165, 0.28089893), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_5nkbs"]
+curve = SubResource("Curve_rj11h")
+
+[resource]
+emission_shape_scale = Vector3(5, 5, 1)
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 50.582
+initial_velocity_min = 18.35
+initial_velocity_max = 27.519999
+angular_velocity_min = 141.89998
+angular_velocity_max = 141.89998
+orbit_velocity_min = 0.1550001
+orbit_velocity_max = 0.3320001
+radial_velocity_min = -2.2351742e-05
+radial_velocity_max = 51.099976
+gravity = Vector3(0, 0, 0)
+linear_accel_min = -100.0
+linear_accel_max = -88.07
+radial_accel_min = -90.51
+radial_accel_max = -90.51
+damping_min = 40.788002
+damping_max = 44.448
+scale_min = 0.0
+scale_max = 10.0
+scale_curve = SubResource("CurveTexture_5nkbs")
+color = Color(0.7764706, 0.98039216, 0.4509804, 1)
+alpha_curve = SubResource("CurveTexture_kbfqn")
+hue_variation_min = -0.050000023
+hue_variation_max = 0.079999976

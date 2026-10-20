@@ -1,0 +1,451 @@
+[gd_scene format=3 uid="uid://c0o5pdpqkeo36"]
+
+[ext_resource type="Script" uid="uid://247siaxvqtc5" path="res://Main/main_menu.gd" id="1_wr501"]
+[ext_resource type="Texture2D" uid="uid://bta5urw4fg04v" path="res://Flip Phone/Phone Sprite.png" id="2_1t8gn"]
+[ext_resource type="Texture2D" uid="uid://hsscq7g4rv5x" path="res://Main Menu2.png" id="2_ooh81"]
+[ext_resource type="Script" uid="uid://dmx5v2ywde8sj" path="res://Main Menu/phone.gd" id="3_ooh81"]
+[ext_resource type="Script" uid="uid://deuvlhlaqlg7c" path="res://Main/start.gd" id="4_ga7i7"]
+[ext_resource type="Script" uid="uid://birk3nkcbmlkn" path="res://Main/controls.gd" id="5_ooh81"]
+[ext_resource type="Script" uid="uid://dhyqixcyno471" path="res://Main/exit.gd" id="6_mlhb2"]
+[ext_resource type="Script" uid="uid://bh5ltp8h6c42c" path="res://Flip Phone/text_sounds.gd" id="7_hka7c"]
+[ext_resource type="AudioStream" uid="uid://c4xmfeubqkrne" path="res://Sounds/9.wav" id="8_t5vg4"]
+[ext_resource type="AudioStream" uid="uid://djdqo1pcjw5a3" path="res://Sounds/7.wav" id="9_8ojye"]
+[ext_resource type="AudioStream" uid="uid://cgykow5wyv4lm" path="res://Sounds/0.wav" id="10_q74s7"]
+[ext_resource type="AudioStream" uid="uid://wv00p51lqsy2" path="res://Sounds/1.wav" id="11_7thbi"]
+[ext_resource type="AudioStream" uid="uid://c6iollxa1aoq3" path="res://Sounds/2.wav" id="12_cfisg"]
+[ext_resource type="AudioStream" uid="uid://b126k2gah1p6u" path="res://Sounds/3.wav" id="13_wq1kf"]
+[ext_resource type="AudioStream" uid="uid://qryjfuqnmueq" path="res://Sounds/4.wav" id="14_1n174"]
+[ext_resource type="AudioStream" uid="uid://bnur8dcwvpb0t" path="res://Sounds/5.wav" id="15_rm36s"]
+[ext_resource type="AudioStream" uid="uid://c1r2fuuathutj" path="res://Sounds/6.wav" id="16_pls7i"]
+[ext_resource type="AudioStream" uid="uid://dix7xy6bljyxb" path="res://Sounds/8.wav" id="17_o150a"]
+[ext_resource type="Theme" uid="uid://btaffc6nlcqrr" path="res://Theme/pixel.tres" id="18_obs3u"]
+[ext_resource type="Texture2D" uid="uid://c0ctvj2xbpkd0" path="res://Enemy/Skeleton.png" id="19_1t8gn"]
+[ext_resource type="Script" uid="uid://bk8bisus7t5ml" path="res://Main Menu/control_tabs.gd" id="19_ga7i7"]
+[ext_resource type="Texture2D" uid="uid://cu44hxkswfunu" path="res://Enemy/Ice.png" id="20_miurs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nkbs"]
+bg_color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t85yq"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qded6"]
+bg_color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xw814"]
+bg_color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g147q"]
+bg_color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uyae"]
+bg_color = Color(0.60784316, 0.6784314, 0.7176471, 1)
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_safcc"]
+polyphony = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75mm1"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.3764706, 0.5254902, 0.23529412, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.14747542, 0.21965906, 0.084864475, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y88hr"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.14747542, 0.21965906, 0.084864475, 1)
+border_width_top = 2
+border_color = Color(0.3764706, 0.5254902, 0.23529412, 1)
+corner_detail = 1
+
+[sub_resource type="Theme" id="Theme_xpxx5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miurs"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga7i7"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooh81"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlhb2"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(72, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hka7c"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(96, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5vg4"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(120, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ojye"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(144, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q74s7"]
+atlas = ExtResource("19_1t8gn")
+region = Rect2(168, 0, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ygxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miurs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga7i7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooh81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlhb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hka7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5vg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ojye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q74s7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main Menu" type="Control" unique_id=390184805]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wr501")
+
+[node name="Main Menu Background" type="TextureRect" parent="." unique_id=464164517]
+z_index = 2
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -609.0
+offset_top = -379.0
+offset_right = 609.0
+offset_bottom = 379.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9732062, 0.9732062)
+texture = ExtResource("2_ooh81")
+
+[node name="Phone" type="Control" parent="." unique_id=1995733830]
+process_mode = 3
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_top = 342.0
+offset_right = -585.0
+offset_bottom = 342.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ooh81")
+
+[node name="PhoneTexture" type="TextureRect" parent="Phone" unique_id=1417097780]
+z_index = 10
+layout_mode = 0
+offset_left = 60.0
+offset_top = -56.0
+offset_right = 360.4041
+offset_bottom = 663.0
+scale = Vector2(0.89445466, 0.89445466)
+texture = ExtResource("2_1t8gn")
+
+[node name="Start" type="Button" parent="Phone" unique_id=509867432]
+process_mode = 3
+z_index = 2000
+layout_mode = 0
+offset_left = 124.0
+offset_top = 308.0
+offset_right = 271.0998
+offset_bottom = 362.60522
+scale = Vector2(0.8784355, 0.8081628)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nkbs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t85yq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qded6")
+action_mode = 0
+text = "Start"
+script = ExtResource("4_ga7i7")
+
+[node name="Survival" type="Button" parent="Phone" unique_id=1926199848]
+process_mode = 3
+z_index = 2000
+layout_mode = 0
+offset_left = 127.00001
+offset_top = 359.0
+offset_right = 274.0998
+offset_bottom = 413.60522
+scale = Vector2(0.8784355, 0.8081628)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nkbs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t85yq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qded6")
+action_mode = 0
+text = "Survival"
+script = ExtResource("4_ga7i7")
+
+[node name="Controls" type="Button" parent="Phone" unique_id=1579810987]
+process_mode = 3
+z_index = 2000
+layout_mode = 0
+offset_left = 126.0
+offset_top = 409.0
+offset_right = 273.0998
+offset_bottom = 463.6051
+scale = Vector2(0.8784355, 0.8081628)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nkbs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xw814")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g147q")
+text = "Controls
+"
+script = ExtResource("5_ooh81")
+
+[node name="Exit" type="Button" parent="Phone" unique_id=732770527]
+process_mode = 3
+z_index = 2000
+layout_mode = 0
+offset_left = 125.0
+offset_top = 462.0
+offset_right = 272.0998
+offset_bottom = 516.6052
+scale = Vector2(0.8784355, 0.8081628)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_5nkbs")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4uyae")
+text = "Exit
+"
+script = ExtResource("6_mlhb2")
+
+[node name="TextSounds" type="AudioStreamPlayer" parent="." unique_id=1106120276]
+process_mode = 3
+stream = SubResource("AudioStreamPolyphonic_safcc")
+max_polyphony = 10
+script = ExtResource("7_hka7c")
+sound_effects = Dictionary[String, AudioStream]({
+"#": ExtResource("8_t5vg4"),
+"*": ExtResource("9_8ojye"),
+"0": ExtResource("10_q74s7"),
+"1": ExtResource("11_7thbi"),
+"2": ExtResource("12_cfisg"),
+"3": ExtResource("13_wq1kf"),
+"4": ExtResource("14_1n174"),
+"5": ExtResource("15_rm36s"),
+"6": ExtResource("16_pls7i"),
+"7": ExtResource("9_8ojye"),
+"8": ExtResource("17_o150a"),
+"9": ExtResource("8_t5vg4")
+})
+
+[node name="ControlTabs" type="TabContainer" parent="." unique_id=1857854059]
+visible = false
+z_index = 2000
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -142.0
+offset_right = 431.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("18_obs3u")
+theme_override_styles/panel = SubResource("StyleBoxFlat_75mm1")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_y88hr")
+tab_alignment = 1
+current_tab = 0
+clip_tabs = false
+script = ExtResource("19_ga7i7")
+
+[node name="General" type="Control" parent="ControlTabs" unique_id=1141909591]
+layout_mode = 2
+theme = SubResource("Theme_xpxx5")
+metadata/_tab_index = 0
+
+[node name="Label" type="Label" parent="ControlTabs/General" unique_id=497496426]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14747542, 0.21965906, 0.084864475, 1)
+theme_override_font_sizes/font_size = 16
+text = "Type the words above the skeletons to kill them.
+
+The bar on the phone screen is a timer to show how long you have until the letter will no longer cycle.
+
+<= button deletes the last character.
+
+NXT submits the character, allowing you to type multiple characters faster."
+autowrap_mode = 2
+
+[node name="Mouse" type="Control" parent="ControlTabs" unique_id=1683424457]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_xpxx5")
+metadata/_tab_index = 1
+metadata/_tab_name = "Mouse"
+
+[node name="Label" type="Label" parent="ControlTabs/Mouse" unique_id=191238223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14747542, 0.21965906, 0.084864475, 1)
+theme_override_font_sizes/font_size = 16
+text = "Click the buttons to cycle through the letters."
+autowrap_mode = 2
+
+[node name="Keyboard" type="Control" parent="ControlTabs" unique_id=1547193356]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+metadata/_tab_name = "Keyboard"
+
+[node name="Label" type="Label" parent="ControlTabs/Keyboard" unique_id=1873313646]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14747542, 0.21965906, 0.084864475, 1)
+theme_override_font_sizes/font_size = 16
+text = "The keyboard controls are:
+
+	1 2 3
+	q w e
+	a s d
+	z x c
+
+I would have done numpad but I don't have a numpad on my keyboard :("
+autowrap_mode = 2
+
+[node name="Tips" type="Control" parent="ControlTabs" unique_id=1341356250]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_xpxx5")
+metadata/_tab_index = 3
+
+[node name="Label" type="Label" parent="ControlTabs/Tips" unique_id=1751362848]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.14747542, 0.21965906, 0.084864475, 1)
+theme_override_font_sizes/font_size = 16
+text = "- Beware red skeletons, they move faster but killing them will clear the closest dangers.
+
+
+
+
+- Ice skeletons will freeze the whole screen if you can defeat them."
+autowrap_mode = 2
+
+[node name="IceSkele" type="AnimatedSprite2D" parent="ControlTabs/Tips" unique_id=1669595396]
+modulate = Color(0.48452926, 0.735357, 0.9063318, 1)
+position = Vector2(416, 259.00003)
+scale = Vector2(2.75, 2.75)
+sprite_frames = SubResource("SpriteFrames_6ygxs")
+autoplay = "default"
+
+[node name="FrozenSkele" type="AnimatedSprite2D" parent="ControlTabs/Tips" unique_id=102681152]
+position = Vector2(274, 258)
+scale = Vector2(2.75, 2.75)
+sprite_frames = SubResource("SpriteFrames_6ygxs")
+
+[node name="RedSkele" type="AnimatedSprite2D" parent="ControlTabs/Tips" unique_id=1071489427]
+modulate = Color(1, 0.29411766, 0.29803923, 1)
+position = Vector2(416, 97)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_6ygxs")
+autoplay = "default"
+
+[node name="Ice" type="Sprite2D" parent="ControlTabs/Tips" unique_id=1420298460]
+self_modulate = Color(1, 1, 1, 0.49411765)
+position = Vector2(274.1, 260.1)
+scale = Vector2(2.9437497, 2.9437497)
+texture = ExtResource("20_miurs")
+
+[connection signal="button_down" from="Phone/Start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Phone/Start" to="Phone/Start" method="_on_button_down"]
+[connection signal="play_sound" from="Phone/Start" to="TextSounds" method="play_sound"]
+[connection signal="button_down" from="Phone/Survival" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="Phone/Survival" to="." method="_on_survival_button_down"]
+[connection signal="button_down" from="Phone/Survival" to="Phone/Survival" method="_on_button_down"]
+[connection signal="play_sound" from="Phone/Survival" to="TextSounds" method="play_sound"]
+[connection signal="button_down" from="Phone/Controls" to="Phone/Controls" method="_on_button_down"]
+[connection signal="button_down" from="Phone/Controls" to="ControlTabs" method="toggle_visible"]
+[connection signal="play_sound" from="Phone/Controls" to="TextSounds" method="play_sound"]
+[connection signal="button_down" from="Phone/Exit" to="Phone/Exit" method="_on_button_down"]
+[connection signal="play_sound" from="Phone/Exit" to="TextSounds" method="play_sound"]

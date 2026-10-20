@@ -1,0 +1,23 @@
+[gd_resource type="Theme" format=3 uid="uid://btaffc6nlcqrr"]
+
+[ext_resource type="FontFile" uid="uid://b61ui2jum6dbf" path="res://Font/PublicPixel-rv0pA.ttf" id="1_pshwu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5nkbs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kbfqn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bx3dx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xr50w"]
+
+[resource]
+default_font = ExtResource("1_pshwu")
+Button/styles/disabled = SubResource("StyleBoxEmpty_5nkbs")
+Button/styles/focus = SubResource("StyleBoxEmpty_kbfqn")
+Button/styles/hover = SubResource("StyleBoxEmpty_bx3dx")
+Button/styles/normal = SubResource("StyleBoxEmpty_xr50w")
+Button/styles/pressed = null
+ProgressBar/styles/background = null
+ProgressBar/styles/fill = null
+TextEdit/colors/caret_color = Color(0.30980393, 0.41960785, 0.003921569, 1)
+TextEdit/constants/caret_width = 4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7v43hbixitlu"
+path="res://.godot/imported/skeleton death.wav-cc1f8a7cf4a3a4d27de093e0e2857a0c.sample"
+
+[deps]
+
+source_file="res://Enemy/skeleton death.wav"
+dest_files=["res://.godot/imported/skeleton death.wav-cc1f8a7cf4a3a4d27de093e0e2857a0c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
